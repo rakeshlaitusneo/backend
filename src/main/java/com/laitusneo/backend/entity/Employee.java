@@ -46,9 +46,6 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
 
-    @ManyToOne
-    @JoinColumn(name = "manager_id")
-    private Employee manager;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;

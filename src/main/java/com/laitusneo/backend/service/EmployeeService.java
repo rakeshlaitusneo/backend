@@ -35,9 +35,6 @@ public class EmployeeService {
         return employeeRepository.findByRoleId(roleId);
     }
 
-    public List<Employee> getEmployeesByManager(Long managerId) {
-        return employeeRepository.findByManagerId(managerId);
-    }
 
     public void deleteEmployee(Long id) {
         employeeRepository.deleteById(id);

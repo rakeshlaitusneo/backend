@@ -48,11 +48,6 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeService.getEmployeesByRole(roleId));
     }
 
-    // Get Employees by Manager
-    @GetMapping("/manager/{managerId}")
-    public ResponseEntity<List<Employee>> getEmployeesByManager(@PathVariable Long managerId) {
-        return ResponseEntity.ok(employeeService.getEmployeesByManager(managerId));
-    }
 
     // Update Employee Status
     @PatchMapping("/{id}/status")
