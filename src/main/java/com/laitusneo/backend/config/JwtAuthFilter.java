@@ -47,7 +47,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
                 if (user != null) {
                     // Map role from DB (ensure ROLE_ prefix for Spring Security)
-                    String role = "ROLE_" + user.getRole().toUpperCase();
+                    String role = "ROLE_" + user.getRole().name();
 
                     UsernamePasswordAuthenticationToken authToken =
                             new UsernamePasswordAuthenticationToken(
